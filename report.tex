@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 6CCS3PRJ Final Year Individual Project Report
+% jan_aldous.torres@kcl.ac.uk
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{informatics-report}
+\usepackage{color}
+\usepackage[square,sort,comma,numbers]{natbib} %References
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{textcomp}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Front Matter - project title, name, supervisor name and date
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Population visualization tool for Lambeth Council}
+\author{Jan Aldous Torres}
+\studentID{1323454}
+\supervisor{Dr Simon Miles}
+
+\date{\today}
+
+\abstractFile{FrontMatter/abstract.tex}
+\ackFile{FrontMatter/acknowledgements.tex} %Remove line if you do not want acknowledgements
+
+\begin{document}
+\createFrontMatter
+\onehalfspacing
+\tableofcontents
+\listoffigures
+\doublespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Report Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% You can write each chapter directly here or in a separate .tex file and use the include command.
+
+\chapter{Introduction}
+\cite{_developing_classification}
+\cite{kent_midway}
+\cite{boden_detecting_2013}
+\cite{conway_data_2014}
+\cite{customer_segmentaion}
+\cite{graves_visualization_2013}
+\cite{smart_cities}
+\cite{acorn_user_guide}
+\cite{gogolou_data_2016}
+\cite{lga_guide}
+\cite{experian}
+
+Local government councils are challenged with the recent cuts in local government funding and a diverse population with different needs. Therefore, there is a need to efficiently allocate resources. The usual approach is to tackle issues raised by individual social services. However, there has been a shift in local government, which is promoted by the national government, to utilize the concept of customer segmentation. This will let them understand the needs of the population better thus letting them utilize and allocate resources in the most effective way based on those needs [4]. This approach would require the council to identify and therefore focus resources on vulnerable population groups. For example, instead of focusing on issues on education, they would focus on the children in care who are most susceptible to lower educational, social and employment outcomes. Some social services deal with the same population groups so this approach would require an integration of data from the different services. This gives an overview of all data from services provided by the councils. This is unlike the former approach which requires individual social services to conduct data analysis using their own data.[TJA1] \par
+
+Lambeth Council in London wants to implement the new approach. However, current methods to analyze and visualize data take a long time before the analyses and visualizations would reach the commissioners, the people in the council who formulate strategies to tackle issues.\par
+ 
+There are off-the-shelf software packages available which supports users in customer segmentation from clustering to the visualization of their data. In government, using data analysis in policy decision making is becoming more popular(new york guy video). The Local Government Agency has created a guideline to support councils in tailor-made clustering and visualization [4]. Moreover, there have been projects by other local councils to visualizations of data on prominent population groups. \par
+
+Lambeth Council would like to have a bespoke population segmentation tool that would be customized to their own needs and available data. This project aims to implement a prototype of such a tool as a Django web application.\par
+
+The tool will focus on the situation in which population groups are in through visualizations. The situations they face will be defined by the data. Visualizations of this data will also help to compare characteristics of the group to the wider population and subgroups. This comparison may lead to observations on which problems a group or subgroup is facing. This may lead to the conclusion that the council may want to increase resources spent on a group or service. The tool basically aid the commissioner to apply customer segmentation on their population and identify which problems segments of the population are facing thus help make decision on the allocation of their resources.\par
+
+Clustering will provide a more complete perspective into the different situations groups face instead of viewing a group as one entity and defines variables which distinguish the group from the rest of the population using clustering algorithms. Data integration from open government datasets will create a more in depth view of groups. And possible relations between geographical locations’ characteristics ie facilities (GP), situation (crime) in a ward and whether they are on the London living wage. Since the user may not necessarily know what they are looking for when they read the data, the visualizations will be in the form that will let the user explore more aspects of the data.\par
+
+\section{Report Structure}
+The remainder of this paper is organized as follows. Chapter 2 introduces related work to the tool and data exploration, and Chapter 3 discusses the requirements of the tool. Chapter 4 outlines the specification and design of the tool. Chapter 5
+
+\include{Chapters/Background}
+\include{Chapters/Requirements}
+\include{Chapters/DesignSpecification}
+\include{Chapters/Body}
+\include{Chapters/Implementation}
+\include{Chapters/ProfessionalIssues}
+\include{Chapters/Evaluation}
+\include{Chapters/Conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{plain}
+\bibliography{references}
+\addcontentsline{toc}{section}{Bibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\include{Appendices/appendix}
+\include{Appendices/UserGuide}
+\include{Appendices/SourceCode}
+\end{document}

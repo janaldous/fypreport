@@ -1,0 +1,50 @@
+\chapter{Background}
+This chapter includes work done on formulating better ways of with data exploration. It will later describe in more detail the work done on the access and visualization of open government data to non-technical people who require access to this type of data. The chapter ends with related application to the prototype of this project.\par
+
+incorporates all relevant issues\par
+main issues are analysed and developed\par
+
+\section{Data analysis in government}
+Give overview of using data in policy decision making\par
+ 
+There has been work to make government data more accessible to people which do not have the technical abilities to merge and manipulate data such as journalists, data journalists, etc. [10]. This is especially true in open government data platforms where datasets take non-standard forms and whose data may be encoded in a way that is not immediately understandable. There have been efforts to evaluate government platforms and to enumerate features that would effectively let users make sense of the data [8].
+
+\section{Customer segmentation}
+Market segmentation or customer segmentation is concept used in business regarding the division of a homogenous population into segments which have similar attributes, wants, needs or demands. “Its objective is to design a marketing mix that precisely matches the expectations of customers in the targeted segment. Few companies are big enough to supply the needs of an entire market; most must breakdown the total demand into segments and choose those that the company is best equipped to handle.” (businessdictionary.com). “The four basic market segmentation-strategies are based on: behavioral, demographic, psychographic, and geographical differences” (businessdictionary.com). Much of the need to have this is due to the lack of resources needed for the whole market. For many of the local government units, it is the constraint of the budget that would require an efficient allocation of resources by choosing specific groups. The national government and LGA promote the application of this concept usually used in the private sector into local government.\par
+ 
+Clustering algorithms could be used to divide the population.\par
+ 
+According to the LGA [], the collation of demographic data and the use of clustering algorithms such as k-means could be used to divide the population into segments. Choosing which \par
+
+
+\section{Related applications}
+
+There have been applications developed similar to the tool this project aims to implement. These include more general purpose customer segmentation tools which allows the user to analyze and then segment data using algorithms, to the visualization and use of that data. There have also been local governments which are following the concept of customer segmentation to also spend their resources more effectively.\par
+
+Customer segmentation tool like Mosaic by Experian (mosaic) and Acorn by CACI (acorn) are tools both to allow population segmentation through customer profiling based on set of demographic and other indicators.\par
+
+Customer classification is a concept promoted by the government and the Local Government Association (LGA) has created a guidance document for any council that wishes to implement such a tool (LGA) (smart cities). \par
+
+Kent and Medway has tool which segments its population by social class and aims to highlight the key features which make each Group distinctive, to help you visualise the segmentation data and understand the essence of each Group (Kent  Medway). It lets the user compare the values between all groups. This tool is bespoke to Kent  Medway’s data and the tool cannot be reused for other council’s data.\par
+
+There have been similarities between tools and recommendations to differentiate and describe each group. (Kent) (LGA) suggested to include maps showing the concentration of that group in each ward and in addition to a textual description, they include pictures to describe each group. (Barnet) has a report on the customer segmentation of its population, and includes the percentage and textual description of its population. (Kent) includes graphs to visualize data but also word maps of key characteristics. (LGA) has suggested that the use of spider diagrams which detail the variables compared to the town and district average. Similarly (Acorn) (Kent), they graph pieces of data with an index of the group compared to the overall population. This visualizes both the average value and the groups relation to that average displays whether they are higher or lower than that average however each graph is created for each variable.\par
+
+LGA has suggested data integration to enable other uses of data. (smart cities) defined use of explicit, “records of who has or is using a service” and implicit “knowledge of staff on customers using a service” customer data in an effort to know their customers in great detail.\par
+
+
+\section{Data visualization and exploration}
+Numerous applications exist to allow users to interact with data. Data exploration involves different types of interaction and functionality and there has been work to create a framework for data exploration [9]. 
+ 
+There has been work done on enumerating the problems with data exploration through visualizations [10].
+ 
+There has also been work done on the visualization of clusters through graphs, which show how closely related the clusters are to each other [7].
+
+Show thinking of why some features of related applications are used here
+Use cases/features of Kent and Medway:
+-	See group data, more specifically see pictures and phrases which describe the group, distribution between wards, data about services used, benefits used and demographics of the group as an index value (0-200) and a map of the group’s population density in the council’s area
+Features of neighbourhood.statistics.gov.uk
+-	The user selects the data to be displayed on the map and chart. Map and geographical unit breakdown chart interacts with each other where hovering over one will highlight the area on both map and chart. The map is divided into geographical units (i.e. ONS’ lower output areas) which are colored according to the band which the area is in. The chart is  according to the user’s setting.
+•	CSV of Lambeth’s 2016 Residential Survey: a survey of a sample of Lambeth’s population consisting of 1024 people about their quality of life, what they thought of Lambeth’s services and about the respondents themselves. The data is in the form of CSV text files where each row contains a person’s entries as categorical data in the form of code (see below Survey Code Translation). Each single answer question has its own column and entries are in code as an integer between 1-100. For the questions which have multiple answers, each answer is regarded as a sub question in the form of “Q5A” meaning question “5”, choice code “A” (makes it look like a string but its supposed to be an integer) (see below Survey Code Translation). Therefore, a sub question has its own column and entries are in code as a “1” or “0”. There are also other fields which have been added to the original survey results such as group, subgroup, quintile, which is a result of previous data analysis.
+•	CSV of Lambeth’s 2016 Residential Survey: a survey of a sample of Lambeth’s population consisting of 1024 people about their quality of life, what they thought of Lambeth’s services and about the respondents themselves. The data is in the form of CSV text files where each row contains a person’s entries as categorical data in the form of code (see below Survey Code Translation). Each single answer question has its own column and entries are in code as an integer between 1-100. For the questions which have multiple answers, each answer is regarded as a sub question in the form of “Q5A” meaning question “5”, choice code “A” (makes it look like a string but its supposed to be an integer) (see below Survey Code Translation). Therefore, a sub question has its own column and entries are in code as a “1” or “0”. There are also other fields which have been added to the original survey results such as group, subgroup, quintile, which is a result of previous data analysis.
+•	Lambeth’s 2016 Residential Survey Code Translation: a Microsoft Word document of the original survey with the original questions and code used in the data associated with the question. Under each question is the choice code and English meaning of the choice. The choice code is either a number for single answer questions (e.g. 1. Male, 2. Female) or letters for multiple answer questions (e.g. A. Access to nature, B. Activities for teenagers, etc.).
+The system may be able to save access (through URLs to CSV and JSON files) or actual files of the datasets (CSV or JSON files themselves). The URLs must be kept in persistent storage. If the input is in the form of a file, the file must be stored.The system may be able to save access (through URLs to CSV and JSON files) or actual files of the datasets (CSV or JSON files themselves). The URLs must be kept in persistent storage. If the input is in the form of a file, the file must be stored.\textquotesingle\textquotesingle\textquotesingle
