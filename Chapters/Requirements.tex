@@ -1,30 +1,16 @@
 \chapter{Requirements}
 
-This section outlines the requirements of the prototype based on correspondence with the user. The first subsection outlines the objectives. The following subsections describe the operations on data by Lambeth Council which is followed by the functional and non-functional requirements.
-
-The user has expressed their intention of following an iterative implementation of the final product, thus this is only the requirements for the first iteration of the prototype.
-
-\section{Interview with Lambeth Council}
-These requirements were based on what I have learned in communication with, Noel Hatch, a line manager at Lambeth Council who communicates with the commissioners in the council. He suggested a tool that would allow the commissioners to create groups through the method of grouping described below (see Method of grouping) using Kent and Medway’s application as inspiration. The tool will allow the user to navigate between groups and visualize the data. Should I have time, allowing the commissioner to analyze the data further is a secondary main objective. He also described the tool should be user-friendly in that the IT skills and data analysis skills of the commissioners are limited.\par
-
-I had limited time with the council such that after the initial requirements, I was not able to communicate until the evaluation stage of the project. I continued the project with the information I had and used this and inspiration from related applications to come up with features that could potentially support the users. Thus the requirements, design and implementation therefore may not be what the users have envisioned.
-
+The functional and non-functional requirements was created based on communication, through interviews and email, with a member of the Policy and Communications Team, and requirements which I have created based on initial requirements by our contact. Our contact described the context in which the tool may be used, the overall objective of the software, the users\textsc{\char13} technical abilities and some functional requirements, namely the method to create groups (see section \ref{creating_groups}). Communication with our contact was not sustained after initial requirements were collected due to the council\textquotesingle s large workload. The rest of the requirements was created in accordance with the overall goal, initial requirements and according to my own analysis of the data.
 
 \section{Objective}
-The purpose of this application is to create a piece of software which will allow local government councils to explore their residential data through graphical and map visualizations. The intent of which is to support them to identify which segments of the population or parts of Lambeth geographically and socially do resources require the most.
+The purpose of this application is to support those in local government councils, in charge of creating policies, to explore data on residents demographics and satisfaction with council services. User-defined groups will allow the user to focus on specific portions of the population. Aided by visualizations through graphs and maps, it may lead the user to identify which segments of the population requires the which resources.
 
-\section{The users}
-The primary users for the program are the commissioners, those responsible for formulating strategies to allocate resources for a council based on the presentation of data analysis given to them. They do not necessarily have technical or statistical analysis skills in terms of being able to operate applications and interpret data.
-
-
-\section{Description of data used}
-A combination of local and national data provided by Lambeth and data collected in past censuses will be used:
-
+\section{Description of data to be used}
+The following local data provided by Lambeth should be used:
 \begin{itemize}
-  \item \textbf{CSV of Lambeth\textquotesingle s 2016 Residential Survey}: a survey of a sample of Lambeth’s population consisting of 1024 people about their quality of life, what they thought of Lambeth’s services and about the respondents themselves. The data is in the form of CSV text files where each row contains a person’s entries as categorical data in the form of code (see below Survey Code Translation). Each single answer question has its own column and entries are in code as an integer between 1-100. For the questions which have multiple answers, each answer is regarded as a sub question in the form of “Q5A” meaning question “5”, choice code “A” (makes it look like a string but its supposed to be an integer) (see below Survey Code Translation). Therefore, a sub question has its own column and entries are in code as a “1” or “0”. There are also other fields which have been added to the original survey results such as group, subgroup, quintile, which is a result of previous data analysis.
-  \item \textbf{Lambeth’s 2016 Residential Survey Code Translation}: a Microsoft Word document of the original survey with the original questions and code used in the data associated with the question. Under each question is the choice code and English meaning of the choice. The choice code is either a number for single answer questions (e.g. 1. Male, 2. Female) or letters for multiple answer questions (e.g. A. Access to nature, B. Activities for teenagers, etc.).
-  \item \textbf{Lambeth’s Open Data}: from Lambeth’s website, it is a compilation of mainly geographical data such as the locations of public amenities and geographical specifications of each ward. These are in the form of CSV or GeoJSON or files.
-  \item \textbf{Office of National Statistics data}: The ONS has a vast number of open data sets. They include datasets from the census, such as employment, housing tenure, etc. They are also in the form of JSON files
+  \item \textbf{CSV of Lambeth\textquotesingle s 2016 Residential Survey}: a survey of a sample of Lambeth\textquotesingle s population consisting of 1024 people about their quality of life, what they thought of Lambeth\textquotesingle s services and about the respondents themselves. The data is in the form of a CSV text file. Residents\textquotesingle  answers are categorical data in the form of code specified by the Survey Code Translation (see point below, Survey Code Translation). Single answer questions have its own column and its choice code is a positive integer. Multiple answer questions, each answer is regarded as a sub question in the form of `Q5A' meaning question 5, choice code `A' (see below Survey Code Translation). Therefore, a sub question has its own column and entries are in code as a 1 or 0 meaning yes or no respectively. There are also other fields which have been added to the original survey results such as group, subgroup, quintile, which is a result of previous data analysis.
+  \item \textbf{Microsoft Word document of Lambeth\textquotesingle s 2016 Residential Survey Code Translation}: a Microsoft Word document of the original survey with the original questions and code used in the data associated with the question. Under each question is the choice code and English meaning of the choice. The choice code is either a number for single answer questions (e.g. 1. Male, 2. Female) or letters for multiple answer questions (e.g. A. Access to nature, B. Activities for teenagers, etc.).
+  \item \textbf{GeoJSON of Lambeth\textquotesingle s Ward\textquotesingle s Boundary Specifications}: downloaded from Lambeth\textquotesingle s website, it is a GeoJSON, simple geographical features encoded as a JSON, of the geographical boundaries of each ward.
 \end{itemize}
 
 \section{Functional Requirements}
@@ -33,72 +19,78 @@ Functional requirements with the words textbf{should} or textbf{must} is a requi
 
 \begin{enumerate}
   \item Data storage
-  \item The system may be able to save access (through URLs to CSV and JSON files) or actual files of the datasets (CSV or JSON files themselves). The URLs must be kept in persistent storage. If the input is in the form of a file, the file must be stored.
-  \item The text in the entries may be of any length.
+    \begin{enumerate}
+      \item 1.	The system must save the actual files of the datasets (CSV, text files or JSON) and not access the file through a URL of another website.
+    \end{enumerate}
+  \item Grouping requirements
+    \begin{enumerate}
+		\item The user should be able to create groups based on the parameters to the 5 factors (see section \ref{creating_groups}). A group\textquotesingle s information should be kept in a database.
+		\item The user should be able to view data about a group through graphs.
+			\begin{enumerate}
+				\item Single answer questions or questions which requires only one answer should be visualized as stacked bar charts or pie charts.
+				\item Multi-code questions or questions which requires more than one answer should be visualized as bar charts.
+				\item Clicking data on a graph should display which wards have answered the selected question and choice on the map (see functional requirement 4).
+				\item The questions under section Questions to be visualized should be visualized following requirements 3a and 3b.
+			\end{enumerate}
+		\item Like a population density map, which shows higher density concentrations of people as a darker color and lower density concentrations as a lighter color on particular areas of the map, the map should show the selected data (see functional requirement 3c). The map should be divided into the council\textquotesingle s wards; the boundaries of each ward should be obvious. The color of the ward should depend on the number of residents who have the selected question and answer (see functional requirement 3c).
+		\item The user should be able to compare values of a data variable between all groups such that groups should be compared to the average value of the variable in the whole population (i.e. compare the percentage of disabled people who are male to the percentage of the whole population who are male).
+		\item 1.	The main data used in the visualizations should be the CSV of Lambeth\textquotesingle s Residential Survey and its Code Translation.
+	\end{enumerate}
+	\item Clustering
+	\begin{enumerate}
+		\item The system should segment a group using a clustering algorithm.
+		\item The system should display any statistical information (e.g. the mean of the answers of a question) on the differences between the clusters.
+		\item The user should be able to compare information between the group\textquotesingle s data and each of the clusters\textquotesingle  data.
+	\end{enumerate}
 \end{enumerate}
 
 
+\section{Creating groups} \label{creating_groups}
+A group should be based on residents\textquotesingle  answers to 5 questions in the residential survey. At least 1 question is required to form a group, therefore the rest of the 4 questions could have any answer. The group will be composed of residents who match the required answer(s) to the required questions.\par
 
-Grouping requirements
-2.	The user should be able to create groups based on the parameters to the 5 factors (see Method of grouping subsection). The groups’ parameters should be kept in the database.
-3.	The user should be able to view data about a group through graphs.
-a.	Single code questions or questions which requires only one answer should be visualized as stacked bar charts or pie charts
-b.	Multi code questions or questions which requires more than one answer should be visualized as bar charts
-c.	Selecting data on a graph should display that data on the map (see functional requirement 5)
-4.	The user should be able to compare a data variable between all groups such that groups should be compared to the average value of the variable (e.g. compare the percentage of disabled people who are male to the percent of overall population who are male).
-5.	The system should display data based on the respondent’s residence on a map. The map may display data within the council’s wards.
-Clustering
-6.	The system should divide the group using a clustering algorithm.
-7.	The system should display how the group has been clustered and any statistical information about the differences between the clusters.
-8.	The user should be able to compare information between the group’s data and each of the cluster’s data.
-9.	The main data used in the visualizations should be the CSV of Lambeth’s Residential Survey and its Code Translation.
-Data integration
-10.	The system may integrate data from other sources (i.e. government’s open data, council’s open data) to a ward (or post code if possible).
-11.	The system may display integrated data on a map. The user may be able to compare a map about a field in the integrated data to a map about a field in the residential data.
+There are 5 questions in which a user can create a group:
 
-
-\section{Method of clustering} \label{method_clustering}
-There are 5 factors in which a user can create a cluster:
 \begin{enumerate}
-	\item Disability/illness
-	\item Whether they are on benefit support
-	\item Educational/employment activity
-	\item Whether they are on the London Living Wage or not
-	\item Housing tenure (i.e. council tenant, private owner, etc.)
+	\item Whether they have a disability or long term illness (Q43)
+
+	\item What type of benefits do they acquire (Q45A-Q45K)
+	\item Educational/employment activity (Q46)
+	\item Whether they are on the London Living Wage (Q47)
+	\item Housing tenure (i.e. council tenant, private owner, etc.) (Q35)
 \end{enumerate}
 
-A cluster is based on the set of answers to the 5 factors the user inputs. A resident must have the exact set of answers to be part of that cluster.
+*Question number in the CSV residential survey is in brackets.
 
-\section{Data visualization} \label{data_visualization}
-After a cluster has been created, the user must be able to see the answers to the following survey questions (question number in brackets denotes the column name in the SPSS file):
+
+\section{Questions to visualize}
+Once a group has been created, the user must be able to see the answers to the following survey questions:
 \begin{enumerate}
-	\item What matters most to them most (Q5)
-	\item What their last contact with the council was (Q26)
-	\item How they use the website (Q27)
-	\item What services they have used (Q39)
-	\item How they access the internet (Q50),
-	\item How well the changes have benefited them (Q11)
-	\item What they value in terms of community cohesion (Q13) 
-	\item Gender (QGEN)
-	\item Age (QAGE)
-	\item Ethnicity (QETH)
+	\item What matters most to them most (Q5) (Multiple, top 3)
+	\item How was their last contact with the Council was made (Q26A- Q26G) (Multiple)
+	\item How they use the website (Q29)  (Multiple)
+	\item What services they have used (Q39) (Multiple)
+	\item How they access the internet (Q50) (Multiple)
+	\item How well the changes have benefited them (Q11) (Single)
+	\item Whether they feel they belong to their neighborhood (Q13\textunderscore R1) (Single)
+	\item Whether they value the friendships in their neighborhood (Q13\textunderscore R2) (Single)
+	\item Whether they could approach a neighbor for advice (Q13\textunderscore R3) (Single)
+	\item Whether neighbors help out each other (Q13\textunderscore R4) (Single)
+	\item Whether they would be willing to work with others to improve their neighborhood (Q13\textunderscore R5) (Single)
+	\item Whether they would join community events in their area (Q13\textunderscore R6) (Single)
+	\item Whether they regularly stop and talk to people in their neighborhood (Q13\textunderscore R7) (Single)
+	\item Whether they would speak highly of their neighborhood when asked (Q13\textunderscore R8) (Single)
+	\item Gender (QGEN) (Single)
+	\item Age (QAGE) (Single)
+	\item Ethnicity (QETH) (Single)
 \end{enumerate}
 
-The answers to the questions above will be visualized under each of the clusters. 
+*Question number in the residential survey is in brackets followed by whether they are a single answer question (Single) or multiple answer question (Multiple).\par
 
-\section{Functional Requirements}
-The following enumerates the functional requirements for the first iteration of implementation. Another set of requirements will be added for the following iterations.
-\begin{enumerate}
-	\item The user should be able to input an SPSS file into the system.
-	\item The user should be able to create clusters by setting parameters to the 5 factors \ref{method_clustering}. The setting for each parameter should be saved for future use.
-	\item The user should be able to navigate between clusters easily.
-	\item The system should visualize data as described in \ref{data_visualization} for each cluster.
-\end{enumerate}
+The answers to the questions above should be visualized using graphs for each group and their clusters based on functional requirement 3. 
 
 \section{Non-functional requirements}
-\textbf{Usability}: One of the main aims of the system is to interface data to the user in an effective way. Since the users are not technical, the ease of use is imperative to the design of the user interface. 
+\textbf{Usability}: The users for the program are the policy makers of the council, those responsible for formulating strategies to allocate resources for a council based on the presentation of data analysis given to them. They do not necessarily have technical skills, in terms of being able to operate applications, or advanced statistical analysis skills. Since the users are not technical savvy, the ease of use is imperative to the design of the user interface. The visualizations should also be easily interpreted. \par
 
-\textbf{Maintainability}: This version of the system will be added on to the future with future data integration and other features, therefore there will be a need for maintainability of the code.
+In terms of maintainability, this version of the system is only a prototype to show the potentials of such a system, therefore there will not be a need for maintainability of the code. In terms of security, the data being used is anonymous therefore there will be no need for security measures for the data.
 
-\textbf{Security}: The data being used is anonymous therefore there will be no need for security measures for the data.
 
