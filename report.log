@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.18)  16 APR 2017 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.18)  16 APR 2017 21:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -797,13 +797,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4585 strings out of 493089
- 69586 string characters out of 6134842
- 141693 words of memory out of 5000000
- 7891 multiletter control sequences out of 15000+600000
+ 4592 strings out of 493089
+ 69701 string characters out of 6134842
+ 141755 words of memory out of 5000000
+ 7898 multiletter control sequences out of 15000+600000
  48907 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,34p,1245b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,34p,1132b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
 15/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2015/texmf-dist
@@ -814,7 +814,7 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on report.pdf (44 pages, 2356294 bytes).
+Output written on report.pdf (44 pages, 2356398 bytes).
 PDF statistics:
  217 PDF objects out of 1000 (max. 8388607)
  130 compressed objects within 2 object streams
