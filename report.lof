@@ -2,8 +2,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Pie chart visualization}}{15}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Formatted text file of survey code translation (See Appendix for actual text)}}{16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces System architecture diagram}}{16}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Interaction diagram of the web application}}{18}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Page design for group\_detail.html and cluster\_compare.html}}{20}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Chart for comparison of the data of the whole population, a group and its clusters}}{21}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Page design for group\_compare.html}}{22}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Page design for cluster\_stats.html}}{22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
