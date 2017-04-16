@@ -41,10 +41,11 @@
 \contentsline {subsection}{\numberline {7.1.5}Resource\_datafield page}{34}
 \contentsline {section}{\numberline {7.2}Project evaluation}{34}
 \contentsline {chapter}{\numberline {8}Conclusion and Future Work}{35}
-\contentsline {section}{Bibliography}{36}
-\contentsline {chapter}{\numberline {A}Extra Information}{37}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{37}
-\contentsline {chapter}{\numberline {B}User Guide}{38}
-\contentsline {section}{\numberline {B.1}Instructions}{38}
-\contentsline {chapter}{\numberline {C}Source Code}{39}
-\contentsline {section}{\numberline {C.1}Instructions}{39}
+\contentsline {section}{\numberline {8.1}Future work}{35}
+\contentsline {section}{Bibliography}{37}
+\contentsline {chapter}{\numberline {A}Extra Information}{38}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{38}
+\contentsline {chapter}{\numberline {B}User Guide}{39}
+\contentsline {section}{\numberline {B.1}Instructions}{39}
+\contentsline {chapter}{\numberline {C}Source Code}{40}
+\contentsline {section}{\numberline {C.1}Instructions}{40}
