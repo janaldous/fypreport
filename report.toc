@@ -20,17 +20,26 @@
 \contentsline {section}{\numberline {4.5}User interface}{18}
 \contentsline {section}{\numberline {4.6}Interface design}{19}
 \contentsline {chapter}{\numberline {5}Implementation and Testing}{23}
-\contentsline {section}{\numberline {5.1}Section Heading}{23}
-\contentsline {chapter}{\numberline {6}Professional and Ethical Issues}{24}
-\contentsline {section}{\numberline {6.1}Section Heading}{24}
-\contentsline {chapter}{\numberline {7}Results/Evaluation}{25}
-\contentsline {section}{\numberline {7.1}Software Testing}{25}
-\contentsline {section}{\numberline {7.2}Section Heading}{25}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{26}
-\contentsline {section}{Bibliography}{27}
-\contentsline {chapter}{\numberline {A}Extra Information}{28}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{28}
-\contentsline {chapter}{\numberline {B}User Guide}{29}
-\contentsline {section}{\numberline {B.1}Instructions}{29}
-\contentsline {chapter}{\numberline {C}Source Code}{30}
-\contentsline {section}{\numberline {C.1}Instructions}{30}
+\contentsline {section}{\numberline {5.1}Development approach}{23}
+\contentsline {section}{\numberline {5.2}Third party libraries}{24}
+\contentsline {section}{\numberline {5.3}Page implementations}{25}
+\contentsline {subsection}{\numberline {5.3.1}Visualization of data into charts}{25}
+\contentsline {subsection}{\numberline {5.3.2}Integration of survey code}{25}
+\contentsline {subsection}{\numberline {5.3.3}Visualization of wards on a map and ward breakdown chart}{26}
+\contentsline {subsection}{\numberline {5.3.4}Visualization the Comparison of Clusters}{27}
+\contentsline {subsection}{\numberline {5.3.5}Comparison of groups}{28}
+\contentsline {subsection}{\numberline {5.3.6}Clustering algorithm}{28}
+\contentsline {subsection}{\numberline {5.3.7}Resource question page}{30}
+\contentsline {chapter}{\numberline {6}Professional and Ethical Issues}{31}
+\contentsline {section}{\numberline {6.1}Section Heading}{31}
+\contentsline {chapter}{\numberline {7}Results/Evaluation}{32}
+\contentsline {section}{\numberline {7.1}Software Testing}{32}
+\contentsline {section}{\numberline {7.2}Section Heading}{32}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{33}
+\contentsline {section}{Bibliography}{34}
+\contentsline {chapter}{\numberline {A}Extra Information}{35}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{35}
+\contentsline {chapter}{\numberline {B}User Guide}{36}
+\contentsline {section}{\numberline {B.1}Instructions}{36}
+\contentsline {chapter}{\numberline {C}Source Code}{37}
+\contentsline {section}{\numberline {C.1}Instructions}{37}
