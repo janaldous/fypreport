@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.18)  16 APR 2017 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.18)  16 APR 2017 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -645,87 +645,89 @@ Overfull \hbox (47.57372pt too wide) in paragraph at lines 51--52
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 59.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 59.
+
 <images/figure1.png, id=114, 925.4575pt x 194.7275pt>
 File: images/figure1.png Graphic file (type png)
  <use images/figure1.png>
-Package pdftex.def Info: images/figure1.png used on input line 63.
+Package pdftex.def Info: images/figure1.png used on input line 65.
 (pdftex.def)             Requested size: 462.72762pt x 97.3635pt.
 
-Overfull \hbox (50.78772pt too wide) in paragraph at lines 63--64
+Overfull \hbox (50.78772pt too wide) in paragraph at lines 65--66
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[25]
-
-LaTeX Warning: Reference `fig:figure2' on page 26 undefined on input line 78.
-
-[26 <./images/4charts.png> <./images/figure1.png>]
-<images/figure2.png, id=123, 731.73375pt x 208.78pt>
+[25] [26 <./images/4charts.png> <./images/figure1.png>]
+<images/figure2.png, id=124, 731.73375pt x 208.78pt>
 File: images/figure2.png Graphic file (type png)
  <use images/figure2.png>
 Package pdftex.def Info: images/figure2.png used on input line 82.
 (pdftex.def)             Requested size: 365.86598pt x 104.38972pt.
 
-<images/figure3.png, id=124, 1193.45876pt x 695.59875pt>
+
+LaTeX Warning: Reference `fig:figure2' on page 27 undefined on input line 87.
+
+<images/figure3.png, id=125, 1193.45876pt x 695.59875pt>
 File: images/figure3.png Graphic file (type png)
 
 <use images/figure3.png>
-Package pdftex.def Info: images/figure3.png used on input line 89.
+Package pdftex.def Info: images/figure3.png used on input line 92.
 (pdftex.def)             Requested size: 358.04039pt x 208.68123pt.
- <images/hover.png, id=125, 468.75125pt x 380.42125pt>
+ <images/hover.png, id=126, 468.75125pt x 380.42125pt>
 File: images/hover.png Graphic file (type png)
 
 <use images/hover.png>
-Package pdftex.def Info: images/hover.png used on input line 98.
+Package pdftex.def Info: images/hover.png used on input line 101.
 (pdftex.def)             Requested size: 140.62645pt x 114.12724pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/comparisonpage.png, id=126, 1192.455pt x 645.41125pt>
+[27 <./images/figure2.png> <./images/figure3.png>]
+<images/comparisonpage.png, id=133, 1192.455pt x 645.41125pt>
 File: images/comparisonpage.png Graphic file (type png)
 
 <use images/comparisonpage.png>
-Package pdftex.def Info: images/comparisonpage.png used on input line 108.
+Package pdftex.def Info: images/comparisonpage.png used on input line 111.
 (pdftex.def)             Requested size: 357.73926pt x 193.62486pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[27 <./images/figure2.png> <./images/figure3.png>]
-<images/groupcompare.png, id=133, 1193.45876pt x 649.42625pt>
+ [28 <./images/hover.png> <./images/comparisonpage.png>] <images/groupcompare.p
+ng, id=139, 1193.45876pt x 649.42625pt>
 File: images/groupcompare.png Graphic file (type png)
 
 <use images/groupcompare.png>
-Package pdftex.def Info: images/groupcompare.png used on input line 122.
+Package pdftex.def Info: images/groupcompare.png used on input line 125.
 (pdftex.def)             Requested size: 358.04039pt x 194.82938pt.
+
+<images/clusterstats.png, id=140, 1206.5075pt x 651.43375pt>
+File: images/clusterstats.png Graphic file (type png)
+
+<use images/clusterstats.png>
+Package pdftex.def Info: images/clusterstats.png used on input line 138.
+(pdftex.def)             Requested size: 361.95505pt x 195.43163pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28 <./images/hover.png> <./images/comparisonpage.png>]
-<images/clusterstats.png, id=139, 1206.5075pt x 651.43375pt>
-File: images/clusterstats.png Graphic file (type png)
-
-<use images/clusterstats.png>
-Package pdftex.def Info: images/clusterstats.png used on input line 135.
-(pdftex.def)             Requested size: 361.95505pt x 195.43163pt.
-
-<images/surveyquestion.png, id=140, 1186.4325pt x 536.0025pt>
+<images/surveyquestion.png, id=141, 1186.4325pt x 536.0025pt>
 File: images/surveyquestion.png Graphic file (type png)
 
 <use images/surveyquestion.png>
-Package pdftex.def Info: images/surveyquestion.png used on input line 146.
+Package pdftex.def Info: images/surveyquestion.png used on input line 149.
 (pdftex.def)             Requested size: 355.9325pt x 160.80199pt.
- [29 <./images/groupcompare.png> <./images/clusterstats.png>]) [30 <./images/su
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [29 <./images/groupcompare.png>] [30 <./images/clusterstats.png> <./images/su
 rveyquestion.png>]
 \openout2 = `Chapters/ProfessionalIssues.aux'.
 
-
-(./Chapters/ProfessionalIssues.tex
+ (./Chapters/ProfessionalIssues.tex
 Chapter 6.
 ) [31
 
@@ -736,20 +738,20 @@ Chapter 6.
 
  (./Chapters/Evaluation.tex
 Chapter 7.
-) [32
+[32
 
 
 
-]
+] [33]) [34]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
 Chapter 8.
-) [33
+) [35
 
 
 
-] (./report.bbl) [34
+] (./report.bbl) [36
 
 
 ]
@@ -757,7 +759,7 @@ Chapter 8.
 
  (./Appendices/appendix.tex
 Appendix A.
-) [35
+) [37
 
 
 ]
@@ -765,7 +767,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [36
+) [38
 
 
 
@@ -774,7 +776,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [37
+) [39
 
 
 
@@ -795,27 +797,29 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4568 strings out of 493089
- 69285 string characters out of 6134842
+ 4585 strings out of 493089
+ 69586 string characters out of 6134842
  141693 words of memory out of 5000000
- 7877 multiletter control sequences out of 15000+600000
+ 7891 multiletter control sequences out of 15000+600000
  48907 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,7n,34p,1245b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-15/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2015/texmf-dist
-/fonts/enc/dvips/lm/lm-rmsc.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1
-/public/lm/lmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm
-/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmcsc10.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on report.pdf (41 pages, 2348408 bytes).
+15/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/texmf-d
+ist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc
+/dvips/lm/lm-rmsc.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm
+/lmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/lm/lmsy10.pfb>
+Output written on report.pdf (43 pages, 2357644 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 219 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

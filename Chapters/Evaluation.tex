@@ -1,5 +1,43 @@
-\chapter{Results/Evaluation}
+\chapter{Evaluation}
 
-\section{Software Testing}
+The evaluation of the software involved the comparison between the design to the implementation. Since it is a visualization project, an independent evaluation was taken from a demonstration to some of the potential users from the policy department in Lambeth Council. The method and results of the evaluation is described below.
 
-\section{Section Heading}
+\section{Demonstration to Lambeth Council}
+
+The demonstration took place in the offices of Lambeth where I presented each page of the web application. The potential of the visualization to aid the formation of strategies were discussed as well as the limitations and improvements of each feature. The requirements were given to them to compare to the actual software as well. The limitations are described below and the solutions to these limitations are in section … of the Conclusion chapter.\par
+
+They have expressed that it has met the objectives overall and that it has the potential given that there would be more features and an option to include data sets to name a few.
+
+The subsections below summarizes the discussions for the visualization pages and the data used.
+
+\subsection{Data used}
+The project focuses on a prototype to explore the possibilities of visualizing a population rather than creating a complete tool with usable data. The current survey data could be used as it is to facilitate the initial analysis of the population though the visualization should be taken with caution. \par
+
+They have expressed that the usefulness of the tool relies on the quality and amount of data used. The tool may not be usable at its current state since the survey data is not representative. The current data set used only surveyed 1024 residents of a council of more than 300,000 residents. It is also uses data from only 1 year. The software does not let the user change which annual residential survey to view nor does it utilize past residential surveys.
+
+\subsection{Group\_detail page}
+This page gave much information as it not only gave data for each question, but also displaying a piece of data on the map showed where those residents live. This may help in identifying areas which need the most help.\par
+
+In terms of the usefulness of the map, dividing it into wards limits the targeting of a smaller area since wards occupy a large area. Generalizing a ward to behave a certain way may ignore the minorities within the area. Using a smaller geographical division such as the Office of National Statistics\textsc{\char13} (ONS) output area or super output area which cover areas smaller than a ward and is included in the current data can identify more specific areas. \par
+
+Due to the smaller data set, should there only be one resident in a ward with a given survey question, the identification of a more specific area, such as ONS\textsc{\char13} output area, would enable the user to identify if the user. For example, a ward with 1 resident in the disabled group could potentially be a person living in a senior home. This could give insights to people living in senior homes rather than a valid representation of disabled people in that ward.\par
+
+The map\textsc{\char13}s color range was misunderstood as red meant danger and green meant good. The choice of colors could have been constrained to shades of one color.\par
+
+\subsection{Group\_compare page}
+
+This page gave a good indication on which questions are more applicable for which group. For example, the visualization shows more people in long-term illness and acquires child benefits are more likely to say they are not paid the London Living Wage. This could potentially help in identifying which resources should be given to which groups of people.\par
+
+The information is limited to the percentage of a piece of data in relation to the data of a question. The comparison between groups and clusters are also in the form of percentages. Other statistical data such as mean, mode, median and standard deviation could be integrated which results in deeper analysis.
+
+\subsection{Clusters pages}
+
+Clustering in a statistical sense, needs to be explained to the users. Upon demonstrating the tool to the council workers, the concept of clustering needed to be explained. The visualization of the clusters as seen in cluster\_detail or cluster\_compare could only be understood given that clustering.
+The cluster\_stats page was confusing as the table of means were still in the survey code. There needed to be English translations of the code supplemented. This was fixed after the demonstration where hovering over the question will show the English translations.
+
+\subsection{Resource\_datafield page}
+They were interested in this page as it has the potential to confirm or debunk some of their expectations of some groups. For example it confirmed that the ethnicities of people living in residential homes were from English, Caribbean or African descent. Another application could be how they would approach some of the groups using the questions regarding the medium of contact with the council or how they access the internet.
+
+\section{Project evaluation}
+
+Though the tool was inspired by the problems faced by a council based on the interview with a Lambeth council worker, the requirements and design of the tool was up to me through research into other visualization applications. Therefore, the end product may not be suitable for them. However, they did express that it has met the requirements I have set for the software. Regular contact during the whole process in terms of feedback of the design and usability, and more specific data sets would have produced a more usable product for their needs.

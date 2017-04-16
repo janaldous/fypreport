@@ -56,7 +56,9 @@ Depending on the type of question, the charts on figure \ref{fig:4charts} was cr
 As a default feature of Google Charts, hovering over a piece of data will display the value of data (see top left of figure \ref{fig:4charts}).
 
 \subsection{Integration of survey code}
-Following the design for the preprocessing of data (see figure \ref{fig:figure1}), the English Code translation text file was created. Readtext.py is the Python module which reads and creates each question into Question objects. Readcsv.py consolidates English and code data into a Python list. This is inputted into a Graphos class which produces the Google Charts JavaScript code. 
+Following the design for the preprocessing of data (see figure \ref{fig:figure1}), the English Code translation text file was created. To speed up the creation of this file, the tables were copied into the text file and a small program was created to format the tables, whose elements are spaced by `\textbackslash r', and replaced with a `\textbackslash n' to format the spaces correctly. The rest of the file was typed manually.\par
+
+Readtext.py is the Python module which reads and creates each question into Question objects. Readcsv.py consolidates English and code data into a Python list. This is inputted into a Graphos class which produces the Google Charts JavaScript code. 
 
 \begin{figure}[h]
 \centering
@@ -75,14 +77,15 @@ The interactivity between the Google Map and Google Chart in the group\_detail p
 
 Additional features to the Graphos code was added. A listener to see if the chart was clicked was added to Graphos\textsc{\char13} code. When a chart is clicked, the function which redraws the chart, map and changes the text is invoked. \par
 
-This interactivity required the map\textquotesingle s contents to be changed (i.e. change the colors of the wards depending on the question selected). A JSON containing a list, which is required in the creation of Google Maps, is populated with the selected data from a chart (see figure \ref{fig:figure2}). This JSON is requested by clicking a chart on the right hand side of the page, which invokes the redrawing of the map. The figure below explains the data flow.
-
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{figure2.png}
 \caption{Implementation of the charts}
 \label{fig:figure1}
 \end{figure}
+
+This interactivity required the map\textquotesingle s contents to be changed (i.e. change the colors of the wards depending on the question selected). A JSON containing a list, which is required in the creation of Google Maps, is populated with the selected data from a chart (see figure \ref{fig:figure2}). This JSON is requested by clicking a chart on the right hand side of the page, which invokes the redrawing of the map. The figure below explains the data flow.
+
 
 \begin{figure}[h]
 \centering
@@ -115,7 +118,7 @@ All charts are stacked bar charts. The click to display on map feature is applic
 \subsection{Comparison of groups}
 On the right-hand side of the page (see figure \ref{fig:groupcompare}), the charts generated from the All group with the same method as in a group\_detail page. However, the left-hand side of the page is a bar chart of the group\textquotesingle s percent difference from the whole survey population. As with a group\textquotesingle s Detail page, clicking a piece of data on a chart will instigate a change in the left-hand side bar chart.\par
 
-The percent difference is calculated using the equation found in the Design chapter (see section s\ref{sec:interfacedesign})
+The percent difference is calculated using the equation found in the Design chapter (see section \ref{sec:interfacedesign})
 
 \begin{figure}[h]
 \centering
@@ -147,3 +150,6 @@ Similar to the clusters\_compare page and implemented with a similar Python oper
 \caption{Screenshot of the resource\_datafield page}
 \label{fig:surveyquestion}
 \end{figure}
+
+\section{Testing}
+To be continued
