@@ -22,10 +22,44 @@ Davey N. How segmentation is improving service in the public sector; 2009.
 \newblock Available from:
   \url{http://www.mycustomer.com/service/channels/how-segmentation-is-improving-service-in-the-public-sector}.
 
+\bibitem{thedatasciencelab2014}
+Finding the K in K-Means Clustering; 2014.
+\newblock Available from:
+  \url{https://datasciencelab.wordpress.com/2013/12/27/finding-the-k-in-k-means-clustering/}.
+
+\bibitem{oneilschutt2014}
+O'Neil C, Schutt R.
+\newblock Doing data science:.
+\newblock O'Reilly; 2014.
+
+\bibitem{Huang1998}
+Huang Z.
+\newblock Extensions to the k-Means Algorithm for Clustering Large Data Sets
+  with Categorical Values.
+\newblock Data Mining and Knowledge Discovery. 1998;2(3):283--304.
+\newblock Available from: \url{http://dx.doi.org/10.1023/A:1009769707641}.
+
+\bibitem{tutorialspoint}
+Data Mining Cluster Analysis;.
+\newblock Available from:
+  \url{https://www.tutorialspoint.com/data_mining/dm_cluster_analysis.htm}.
+
 \bibitem{clusteringintroduction}
 A Tutorial on Clustering Algorithms;.
 \newblock Available from:
   \url{https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/}.
+
+\bibitem{Hayashi1998}
+Hayashi C.
+\newblock In: Hayashi C, Yajima K, Bock HH, Ohsumi N, Tanaka Y, Baba Y,
+  editors. What is Data Science ? Fundamental Concepts and a Heuristic Example.
+  Tokyo: Springer Japan; 1998. p. 40--51.
+\newblock Available from: \url{http://dx.doi.org/10.1007/978-4-431-65950-1_3}.
+
+\bibitem{peng2016}
+Peng RME.
+\newblock The Art of Data Science.
+\newblock Lulu Com; 2016.
 
 \bibitem{gogoloudata2016}
 Gogolou A, Kyriakidi M, Ioannidis Y.
@@ -62,5 +96,9 @@ Customer Segmentation;.
 Kent \& Medway Interactive Guide;.
 \newblock Available from:
   \url{http://guides.business-strategies.co.uk/kentandmedway/html/visualisation.htm?010121}.
+
+\bibitem{django}
+Django;.
+\newblock Available from: \url{https://www.djangoproject.com/}.
 
 \end{thebibliography}

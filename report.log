@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.18)  18 APR 2017 04:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.18)  18 APR 2017 04:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -523,45 +523,7 @@ Chapter 2.
 [6
 
 
-]
-
-Package natbib Warning: Citation `thedatasciencelab2014' on page 7 undefined on
- input line 19.
-
-
-Package natbib Warning: Citation `oneilschutt2014' on page 7 undefined on input
- line 21.
-
-
-Package natbib Warning: Citation `Huang1998' on page 7 undefined on input line 
-21.
-
-[7]
-
-Package natbib Warning: Citation `tutorialspoint' on page 8 undefined on input 
-line 23.
-
-
-Package natbib Warning: Citation `Hayashi1998' on page 8 undefined on input lin
-e 26.
-
-
-Package natbib Warning: Citation `oneilschutt2014' on page 8 undefined on input
- line 26.
-
-
-Package natbib Warning: Citation `oneilschutt2014' on page 8 undefined on input
- line 28.
-
-
-Package natbib Warning: Citation `peng2016' on page 8 undefined on input line 2
-8.
-
-
-Package natbib Warning: Citation `oneilschutt2014' on page 8 undefined on input
- line 33.
-
-[8] <images/neighborhood.png, id=46, 1016.29688pt x 603.25375pt>
+] [7] [8] <images/neighborhood.png, id=46, 1016.29688pt x 603.25375pt>
 File: images/neighborhood.png Graphic file (type png)
 
 <use images/neighborhood.png>
@@ -592,10 +554,6 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
  (./Chapters/DesignSpecification.tex
 Chapter 4.
-
-Package natbib Warning: Citation `django' on page 17 undefined on input line 8.
-
-
 <images/textformatted.png, id=79, 541.02126pt x 278.03876pt>
 File: images/textformatted.png Graphic file (type png)
 
@@ -818,17 +776,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--24
 stomer . com / service / channels /
  []
 
-
-Underfull \hbox (badness 1360) in paragraph at lines 57--60
-[]\OT1/lmr/m/n/10 Customer Seg-men-ta-tion;.  Avail-able from: $\OT1/lmtt/m/n/1
-0 http : / / acorn . caci . co . uk / downloads /
- []
-
 [39
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
+Underfull \hbox (badness 1360) in paragraph at lines 91--94
+[]\OT1/lmr/m/n/10 Customer Seg-men-ta-tion;.  Avail-able from: $\OT1/lmtt/m/n/1
+0 http : / / acorn . caci . co . uk / downloads /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
 []\OT1/lmr/m/n/10 Kent & Med-way In-ter-ac-tive Guide;.  Avail-able from: $\OT1
 /lmtt/m/n/10 http : / / guides .
  []
@@ -910,11 +868,7 @@ Appendix B.
 
 
 
-]
-
-Package natbib Warning: There were undefined citations.
-
-(./report.aux (./Chapters/Background.aux) (./Chapters/Requirements.aux)
+] (./report.aux (./Chapters/Background.aux) (./Chapters/Requirements.aux)
 (./Chapters/DesignSpecification.aux) (./Chapters/Implementation.aux)
 (./Chapters/ProfessionalIssues.aux) (./Chapters/Evaluation.aux)
 (./Chapters/Conclusion.aux) (./Appendices/UserGuide.aux)
@@ -927,10 +881,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4717 strings out of 493089
- 71964 string characters out of 6134842
- 135908 words of memory out of 5000000
- 8015 multiletter control sequences out of 15000+600000
+ 4731 strings out of 493089
+ 72286 string characters out of 6134842
+ 136020 words of memory out of 5000000
+ 8029 multiletter control sequences out of 15000+600000
  45000 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,7n,34p,1128b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -945,7 +899,7 @@ al/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts
 /type1/public/lm/lmtt10.pfb>
-Output written on report.pdf (52 pages, 3000972 bytes).
+Output written on report.pdf (52 pages, 3002035 bytes).
 PDF statistics:
  257 PDF objects out of 1000 (max. 8388607)
  148 compressed objects within 2 object streams
