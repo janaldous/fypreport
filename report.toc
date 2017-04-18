@@ -1,10 +1,9 @@
 \contentsline {chapter}{\numberline {1}Introduction}{4}
-\contentsline {section}{\numberline {1.1}Report Structure}{5}
 \contentsline {chapter}{\numberline {2}Background}{6}
 \contentsline {section}{\numberline {2.1}Customer segmentation}{6}
 \contentsline {section}{\numberline {2.2}Clustering}{7}
 \contentsline {section}{\numberline {2.3}Data science}{8}
-\contentsline {subsection}{\numberline {2.3.1}Data exploration}{9}
+\contentsline {subsection}{\numberline {2.3.1}Data exploration}{8}
 \contentsline {section}{\numberline {2.4}Related works}{9}
 \contentsline {subsection}{\numberline {2.4.1}Data exploration tools}{9}
 \contentsline {subsection}{\numberline {2.4.2}Customer segmentation tools}{10}
@@ -45,10 +44,18 @@
 \contentsline {section}{\numberline {7.2}Project evaluation}{36}
 \contentsline {chapter}{\numberline {8}Conclusion and Future Work}{37}
 \contentsline {section}{\numberline {8.1}Future work}{37}
-\contentsline {section}{Bibliography}{39}
-\contentsline {chapter}{\numberline {A}Extra Information}{40}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{40}
-\contentsline {chapter}{\numberline {B}User Guide}{41}
-\contentsline {section}{\numberline {B.1}Instructions}{41}
-\contentsline {chapter}{\numberline {C}Source Code}{42}
-\contentsline {section}{\numberline {C.1}Instructions}{42}
+\contentsline {section}{Bibliography}{40}
+\contentsline {chapter}{\numberline {A}User Guide}{41}
+\contentsline {section}{\numberline {A.1}Running the program}{41}
+\contentsline {section}{\numberline {A.2}Home page}{42}
+\contentsline {section}{\numberline {A.3}Creating a group}{42}
+\contentsline {section}{\numberline {A.4}Group pages}{43}
+\contentsline {subsection}{\numberline {A.4.1}Group detail page}{43}
+\contentsline {subsection}{\numberline {A.4.2}Compare clusters page}{44}
+\contentsline {subsection}{\numberline {A.4.3}Stats page}{44}
+\contentsline {subsection}{\numberline {A.4.4}Cluster detail page}{45}
+\contentsline {section}{\numberline {A.5}Compare groups page}{46}
+\contentsline {section}{\numberline {A.6}Survey pages}{47}
+\contentsline {subsection}{\numberline {A.6.1}Survey page}{47}
+\contentsline {subsection}{\numberline {A.6.2}Survey question page}{47}
+\contentsline {chapter}{\numberline {B}Source Code}{48}

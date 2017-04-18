@@ -1,0 +1,209 @@
+{% extends "clusters/base_split.html" %}
+{% load static %}
+{% load clusters_extras %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'clusters/css/map.css' %}">
+{% endblock %}
+
+{% block group_name %}
+
+<h1>{{ cluster.name }}</h1>
+<a class="btn btn-info" id="all-button" href="#" role="button">Refresh map</a>
+{% if compare or issubcluster %}
+<a class="btn btn-primary" href="{% url 'clusters:detail' cluster.id %}" role="button">See this group</a>
+{% endif %}
+<a class="btn btn-primary" href="{% url 'clusters:compare' cluster.id %}" role="button">Compare clusters</a>
+<a class="btn btn-primary" href="{% url 'clusters:stats' cluster.id %}" role="button">Stats</a>
+{% for population in subcluster_values %}
+  <a class="btn btn-primary" href="{% url 'clusters:subcluster_detail' cluster.id forloop.counter0 %}">Cluster {{ forloop.counter0 }}</a>
+{% endfor %}
+<a class="btn btn-primary" data-toggle="modal" data-target="#aboutModal">About group</a>
+<a class="btn btn-primary" href="{% url 'clusters:edit' cluster.id %}">Edit group</a>
+
+{% endblock %}
+
+
+{% block modal %}
+  <h4>Group factors</h4>
+  <ul>
+    <li>Q43 : {{ questions_strs.0 }} <span class="badge">{% choice_as_str 1 cluster.factor1 %}</span></li>
+    <li>Q45 : {{ questions_strs.1 }} <span class="badge">{% choice_as_str 2 cluster.factor2 %}</span></li>
+    <li>Q46 : {{ questions_strs.2 }} <span class="badge">{% choice_as_str 3 cluster.factor3 %}</span></li>
+    <li>Q47 : {{ questions_strs.3 }} <span class="badge">{% choice_as_str 4 cluster.factor4 %}</span></li>
+    <li>Q35 : {{ questions_strs.4 }} <span class="badge">{% choice_as_str 5 cluster.factor5 %}</span></li>
+  </ul>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>Number of rows: {{ group_size }}/{{ survey_size }}  ({% percent group_size survey_size %}%)</p>
+      <p>Source: {{ about }}</p>
+      <p>Number of clusters: {{ num_of_clusters }}</p>
+      <ul>
+      {% for population in subcluster_values %}
+        <li><a href="{% url 'clusters:subcluster_detail' cluster.id forloop.counter0 %}">Cluster {{ forloop.counter0 }}</a> [{{ population }}]</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% if cluster.id != 3 %}
+  <a class="btn btn-danger" href="{% url 'clusters:delete' cluster.id %}">Delete group</a>
+  {% endif %}
+
+{% endblock %}
+
+{% block content %}
+{% if df_size == 0 %}
+  There are no rows for this cluster
+{% else %}
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+  </script>
+  {% for chart in charts %}
+    {{ chart.as_html }}
+  {% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block map %}
+  <div style="padding:5px;">
+      <b>Question: </b><span id="showing-question"></span>
+      <br><b>Choice: </b><span id="showing-choice"></span>
+      {% if compare %}<br><b>Cluster: </b><span id="showing-cluster"></span>{% endif %}
+  </div>
+  <p id="showing-choice"></p>
+  <div id="legend">
+    <div id="census-min">min</div>
+    <div class="color-key"><span id="data-caret">&#x25c6;</span></div>
+    <div id="census-max">max</div>
+  </div>
+  <div id="data-box" class="nicebox">
+    <label id="data-label" for="data-value"></label>
+    <span id="data-value"></span>
+  </div>
+  <div id="map" style="height:60%;"></div>
+
+  <div id="Ward" style="width: 100%; height: 24%;"></div>
+{% endblock %}
+
+{% block scripts %}
+<script>cluster_id = "{{ cluster.id }}";</script>
+<script>subcluster_id = "{{ subcluster_id }}";</script>
+{% if compare %}
+<script>var compare = true;</script>
+{% else %}
+<script>var compare = false;</script>
+{% endif %}
+
+<script src='{% static "clusters/changetext.js" %}'></script>
+<script src='{% static "clusters/map.js" %}'></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbcM5AOjEOn5tp18yfzV2jep_1gCdtmgo&callback=initMap"></script>
+<script>
+google.setOnLoadCallback(drawChartWard);
+var chart;
+function drawChartWard() {
+  /**
+  * this function draws the Ward bar chart for the first time
+  **/
+  var url =  "../jsonv2/"+cluster_id+"/"+subcluster_id;
+  if (subcluster_id != 'a') {
+    url = "../"+url;
+  }
+  var json = (function () {
+      var json = null;
+      $.ajax({
+          'async': false,
+          'global': false,
+          'url': url,
+          'dataType': "json",
+          'success': function (data) {
+              json = data;
+          }
+      });
+      return json;
+  })();
+
+  console.log(url);
+
+  var data = google.visualization.arrayToDataTable(json);
+
+  //swaps first and second column, to show properly on bar chart
+  var view = new google.visualization.DataView(data);
+  view.setColumns([1, 0]); //before [value, Ward], after [Ward, value]
+  view.setRows(view.getSortedRows({column:1, desc:true}));//sorts rows in desc value
+
+  var options = {"title": "Ward breakdown", bar: { groupWidth: "100%" }, legend: "none"};
+
+  chart = new google.visualization.ColumnChart(document.getElementById('Ward'));
+
+  chart.draw(view, options);
+  chartGIwoVrxfEw = chart;
+}
+
+function redrawWardChart(cluster_id, subcluster_id, question, choice) {
+  var url =  "../json4/" + cluster_id + "/" + subcluster_id + "/" + question + "/" + choice;
+  if (subcluster_id != 'a' && compare == false) {
+    url = "../"+url;
+  }
+  var json = (function () {
+      var json = null;
+      $.ajax({
+          'async': false,
+          'global': false,
+          'url': url,
+          'dataType': "json",
+          'success': function (data) {
+              json = data;
+          }
+      });
+      return json;
+  })();
+
+  console.log(url);
+
+  var data = google.visualization.arrayToDataTable(json);
+
+  //swaps first and second column, to show properly on bar chart
+  var view = new google.visualization.DataView(data);
+  view.setColumns([1, 0]); //before [value, Ward], after [Ward, value]
+  view.setRows(view.getSortedRows({column:1, desc:true}));//sorts rows in desc value
+
+  chart = new google.visualization.ColumnChart(document.getElementById('Ward'));
+
+  var options = {"title": "Ward breakdown", bar: { groupWidth: "100%" }, legend: "none"};
+  chart.draw(view, options);
+
+}
+
+// fade in/out #about-group when # is clicked
+(function ($) {
+  $(function () {
+    $("#all-button").click(function () {
+        loadCensusData("/clusters/json/"+cluster_id+"/"+subcluster_id);
+        drawChartWard();
+    });
+  });
+
+}(jQuery));
+
+</script>
+{% endblock %}
+
+{% block instructions %}
+<ul>
+  <li>
+    Click on a chart on the right hand side of the screen and it will display
+    the data on the map and Ward breakdown chart on the right hand side of the screen.
+  </li>
+  <li>
+    Please note that the range on the map changes when a new variable is clicked.
+  </li>
+
+{% if compare %}
+  <li>Charts with legen 0 or 1: 0 - # of residents who did not chose this choice;
+    1 - # of resdients who chose this choice. </li>
+{% endif %}
+</ul>
+{% endblock %}

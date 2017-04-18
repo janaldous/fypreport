@@ -8,65 +8,97 @@ A level-1 auxiliary file: Chapters/Implementation.aux
 A level-1 auxiliary file: Chapters/ProfessionalIssues.aux
 A level-1 auxiliary file: Chapters/Evaluation.aux
 A level-1 auxiliary file: Chapters/Conclusion.aux
-The style file: plain.bst
-A level-1 auxiliary file: Appendices/appendix.aux
+The style file: vancouver.bst
 A level-1 auxiliary file: Appendices/UserGuide.aux
 A level-1 auxiliary file: Appendices/SourceCode.aux
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: references.bib
-Warning--entry type for "smart_cities" isn't style-file defined
---line 2 of file references.bib
-Warning--entry type for "kent_midway" isn't style-file defined
---line 78 of file references.bib
-Warning--I didn't find a database entry for "_developing_classification"
-Warning--I didn't find a database entry for "customer_segmentaion"
-Warning--to sort, need author or key in kent_midway
-Warning--to sort, need author or key in smart_cities
-Warning--to sort, need author or key in acorn_user_guide
-Warning--to sort, need author or key in lga_guide
-Warning--to sort, need author or key in experian
-Warning--empty year in boden_detecting_2013
-Warning--empty year in conway_data_2014
-Warning--empty year in gogolou_data_2016
-Warning--empty year in graves_visualization_2013
-You've used 9 entries,
-            2118 wiz_defined-function locations,
-            545 strings with 5514 characters,
-and the built_in function-call counts, 2704 in all, are:
-= -- 274
-> -- 61
-< -- 4
-+ -- 27
-- -- 18
-* -- 147
-:= -- 344
-add.period$ -- 21
-call.type$ -- 9
-change.case$ -- 36
+Warning--entry type for "smartcities" isn't style-file defined
+--line 9 of file references.bib
+Warning--entry type for "kentmidway" isn't style-file defined
+--line 85 of file references.bib
+Warning--I didn't find a database entry for "thedatasciencelab2014"
+Warning--I didn't find a database entry for "oneilschutt2014"
+Warning--I didn't find a database entry for "Huang1998"
+Warning--I didn't find a database entry for "tutorialspoint"
+Warning--I didn't find a database entry for "Hayashi1998"
+Warning--I didn't find a database entry for "peng2016"
+Warning--I didn't find a database entry for "django"
+Warning--empty author in smartcities
+Warning--empty author and editor in smartcities
+Warning--missing publisher in smartcities
+Warning--there's a month but no year in smartcities
+Warning--empty author in lgaguide
+Warning--empty author and editor in lgaguide
+Warning--there's a month but no year in lgaguide
+Warning--empty author in marketing912017
+Warning--empty author and editor in marketing912017
+Warning--missing publisher in marketing912017
+Warning--empty author and editor in davey2009
+Warning--missing publisher in davey2009
+Warning--empty author in clusteringintroduction
+Warning--empty author and editor in clusteringintroduction
+Warning--missing publisher in clusteringintroduction
+Warning--there's a month but no year in clusteringintroduction
+Warning--there's a month but no year in gogoloudata2016
+Warning--there's a month but no year in gravesvisualization2013
+Warning--empty author in neighbourhoodstatistics
+Warning--empty author and editor in neighbourhoodstatistics
+Warning--missing publisher in neighbourhoodstatistics
+Warning--there's a month but no year in neighbourhoodstatistics
+Warning--empty author in experian
+Warning--empty author and editor in experian
+Warning--there's a month but no year in experian
+Warning--empty author in acornuserguide
+Warning--empty author and editor in acornuserguide
+Warning--missing publisher in acornuserguide
+Warning--there's a month but no year in acornuserguide
+Warning--empty author in kentmidway
+Warning--empty author and editor in kentmidway
+Warning--missing publisher in kentmidway
+Warning--there's a month but no year in kentmidway
+You've used 11 entries,
+            3170 wiz_defined-function locations,
+            709 strings with 6619 characters,
+and the built_in function-call counts, 5189 in all, are:
+= -- 553
+> -- 32
+< -- 2
++ -- 20
+- -- 6
+* -- 350
+:= -- 593
+add.period$ -- 30
+call.type$ -- 11
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 129
-empty$ -- 283
-format.name$ -- 18
-if$ -- 643
+cite$ -- 44
+duplicate$ -- 387
+empty$ -- 552
+format.name$ -- 8
+if$ -- 1257
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 4
-newline$ -- 38
-num.names$ -- 8
-pop$ -- 69
+int.to.str$ -- 11
+missing$ -- 67
+newline$ -- 53
+num.names$ -- 3
+pop$ -- 190
 preamble$ -- 1
-purify$ -- 27
+purify$ -- 0
 quote$ -- 0
-skip$ -- 130
+skip$ -- 222
 stack$ -- 0
-substring$ -- 181
-swap$ -- 51
-text.length$ -- 4
+substring$ -- 481
+swap$ -- 134
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
-warning$ -- 9
-while$ -- 20
-width$ -- 10
-write$ -- 75
-(There were 13 warnings)
+type$ -- 0
+warning$ -- 33
+while$ -- 21
+width$ -- 13
+write$ -- 109
+(There were 42 warnings)

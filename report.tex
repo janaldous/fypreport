@@ -8,11 +8,12 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{textcomp}
+\usepackage[strings]{underscore}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Front Matter - project title, name, supervisor name and date
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Prototype for a population visualization tool}
+\title{A tool for the visualization of populations}
 \author{Jan Aldous Torres}
 \studentID{1323454}
 \supervisor{Dr Simon Miles}
@@ -35,32 +36,18 @@
 % You can write each chapter directly here or in a separate .tex file and use the include command.
 
 \chapter{Introduction}
-\cite{_developing_classification}
-\cite{kent_midway}
-\cite{boden_detecting_2013}
-\cite{conway_data_2014}
-\cite{customer_segmentaion}
-\cite{graves_visualization_2013}
-\cite{smart_cities}
-\cite{acorn_user_guide}
-\cite{gogolou_data_2016}
-\cite{lga_guide}
-\cite{experian}
 
-Local government councils are challenged with the recent cuts in funding and need to cater to a diverse population with different needs. Therefore, there is a need to efficiently allocate resources. There has been a shift in local government, which is promoted by the national government, to utilize the concept of customer segmentation in marketing. This will let them understand the needs of segments of the population better thus letting them utilize and allocate resources in the most effective way based on those needs [4]. This approach would require the council to identify population groups with similar needs. In government, using data analysis in policy decision making is becoming more popular(new york guy video)\par
+Local government councils are challenged with providing services using limited resources. They also need to cater to a diverse population with different needs. Therefore, there is a need to create policies which efficiently utilize and allocate resources in the most effective way. \par
 
-Clustering algorithms groups a data set into groups in which elements in a group are more similar than other groups. Clustering will provide a more complete perspective into the different situations groups face instead of viewing a group as one entity and defines variables which distinguish the group from the rest of the population using clustering algorithms. This is the first step in customer segmentation where the algorithm can identify groups which may not have been evident before. The visualization of the clustering results make data on groups are more accessible and legible to the user.\par
+Using data science in policy decision making is gaining in popularity. Data science provides insights on trends and patterns about customer needs and behavior which may lead to policies to better cater to those needs. One technique to identify customer needs is customer segmentation which groups individuals with similar needs. This will let councils better understand the needs of segments of the population thus letting them tailor services to provide better services and identify groups which require the most attention. Clustering algorithms, which also group similar objects together, can automate the identification of segments which is especially useful when one deals with large data sets. Since it uses a similarity calculation, it could identify groups which have not been considered before. The national government and the Local Government Association have promoted customer segmentaion in local governments especially after budget cuts \cite{smartcities} \cite{lgaguide}. \par
 
-There are off-the-shelf software packages available which supports users in customer segmentation from clustering, in a statistical sense, to the visualization of their data. The Local Government Agency has created a guideline to support councils in tailor-made clustering and visualization [4]. Moreover, there have been projects by other local councils to visualizations of data on prominent population groups. \par
+The process of data analysis often involves technical skills since data analysis tools are sophisticated tools. Policy makers may not have these skills. This distances themselves from interacting and understanding the data.\par
 
-However, these tools require technical skills which the policy makers may not have or only uses a specific data set. Those in councils who deal with policy making who deal with such problems also deal with numerous data sets. Analyzing these data sets is a tedious task that requires technical expertise and distances the policy makers from exploring the data themselves.\par
+This project aims to produce a software that allows policy makers in councils to explore the data themselves. This project aims to implement a prototype of such a tool as a Django web application.\par
 
-This project aims to produce software so that the commissioners could explore the data themselves through visualization of the data and using clustering algorithms used in customer segmentation. This project aims to implement a prototype of such a tool as a Django web application.\par
+The tool allows the user to create population groups and visualize data about them. Visualizations of this data will also help to compare characteristics of the group to the wider population and subgroups. This comparison may lead to observations on the circumstances a group is facing. This may lead to the conclusion that the council may want to increase or tailor resources allocated to a group or service. Since the user may not necessarily know what they are looking for when they view the data, the visualizations will be in the form that will let the user explore more aspects of the data. \par
 
-The tool allows the user to create population groups and visualize data about them. Visualizations of this data will also help to compare characteristics of the group to the wider population and subgroups. This comparison may lead to observations on the circumstances a group or subgroup is facing. This may lead to the conclusion that the council may want to increase or tailor resources allocated to a group or service. Since the user may not necessarily know what they are looking for when they view the data, the visualizations will be in the form that will let the user explore more aspects of the data. The tool aims to aid policy makers to explore data about their population and identify which problems segments of the population are facing. Thus it could help make better decisions on the allocation of their resources. \par
-
-\section{Report Structure}
-The remainder of this paper is organized as follows. Chapter \ref{ch:background} introduces the concept of customer segmentation, clustering, processes of data analysis and related work to the tool. Chapter \ref{ch:requirements} discusses the requirements of the tool. Chapter \ref{ch:design} outlines the specification and design of the tool. Chapter \ref{ch:implementation} describes how the tool was implemented. Chapter \ref{ch:professionalissues} discuses the professional and ethical issues. Chapter \ref{ch:evaluation} describes the results of the evaluation after the tool was demonstrated to members of the policy department. Lastly, chapter \ref{ch:conclusion} discuses the conclusions and future work of the project.
+The remainder of this paper is organized as follows. Chapter \ref{ch:background} introduces the concept of customer segmentation, clustering, data exploration and related work. Chapter \ref{ch:requirements} discusses the requirements of the tool. Chapter \ref{ch:design} outlines the specification and design of the tool. Chapter \ref{ch:implementation} describes how the tool was implemented. Chapter \ref{ch:professionalissues} discuses the professional and ethical issues. Chapter \ref{ch:evaluation} describes the results of the evaluation after the tool was demonstrated to members of the policy department. Lastly, chapter \ref{ch:conclusion} discuses the conclusions and future work of the project.
 
 \include{Chapters/Background}
 \include{Chapters/Requirements}
@@ -73,7 +60,7 @@ The remainder of this paper is organized as follows. Chapter \ref{ch:background}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % References
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{plain}
+\bibliographystyle{vancouver}
 \bibliography{references}
 \addcontentsline{toc}{section}{Bibliography}
 
@@ -81,7 +68,7 @@ The remainder of this paper is organized as follows. Chapter \ref{ch:background}
 % Appendices
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\include{Appendices/appendix}
+%\include{Appendices/appendix}
 \include{Appendices/UserGuide}
 \include{Appendices/SourceCode}
 \end{document}

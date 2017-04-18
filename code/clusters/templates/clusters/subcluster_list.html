@@ -1,0 +1,11 @@
+{% extends "clusters/base.html" %}
+
+{% block content %}
+
+  <h1>Subclusters</h1>
+  <ul>
+  {% for i in subcluster_values %}
+    <li><a href="{% url 'clusters:subcluster_detail' cluster_id forloop.counter0 %}">Subcluster {{ forloop.counter0 }}</a> [{{ i }}]</li>
+  {% endfor %}
+  </ul>
+{% endblock %}

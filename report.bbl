@@ -1,48 +1,66 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{smart_cities}
-3. customer segmentation and profiling.
+\bibitem{smartcities}
+3. Customer segmentation and profiling;.
+\newblock Available from:
+  \url{http://www.smartcities.info/3-customer-segmentation-and-profiling}.
 
-\bibitem{acorn_user_guide}
-Customer segmentation.
-
-\bibitem{experian}
-Customer segmentation.
-
-\bibitem{lga_guide}
+\bibitem{lgaguide}
 Developing a customer classfication tool: Guidance document for local
   authorities.
+\newblock Local Government Association;.
+\newblock Available from:
+  \url{http://www.local.gov.uk/c/document_library/get_file?uuid=6c3904e3-913b-4b01-86cc-c700aa4414c4&groupId=10180}.
 
-\bibitem{kent_midway}
-Kent \& medway interactive guide.
+\bibitem{marketing912017}
+4 types of Market segmentation and how to segment?; 2017.
+\newblock Available from:
+  \url{http://www.marketing91.com/4-types-market-segmentation-segment/}.
 
-\bibitem{boden_detecting_2013}
-Brigitte Boden, Roman Haag, and Thomas Seidl.
-\newblock Detecting and exploring clusters in attributed graphs: a plugin for
-  the gephi platform.
-\newblock In {\em Proceedings of the 22nd {ACM} international conference on
-  Conference on information \& knowledge management}, {CIKM} '13, pages
-  2505--2508. {ACM}.
+\bibitem{davey2009}
+Davey N. How segmentation is improving service in the public sector; 2009.
+\newblock Available from:
+  \url{http://www.mycustomer.com/service/channels/how-segmentation-is-improving-service-in-the-public-sector}.
 
-\bibitem{conway_data_2014}
-Drew Conway.
-\newblock Data science through the lens of social science.
-\newblock In {\em Proceedings of the 20th {ACM} {SIGKDD} International
-  Conference on Knowledge Discovery and Data Mining}, {KDD} '14, pages
-  1520--1520. {ACM}.
+\bibitem{clusteringintroduction}
+A Tutorial on Clustering Algorithms;.
+\newblock Available from:
+  \url{https://home.deib.polimi.it/matteucc/Clustering/tutorial_html/}.
 
-\bibitem{gogolou_data_2016}
-Anna Gogolou, Marialena Kyriakidi, and Yannis Ioannidis.
-\newblock Data exploration: A roll call of all user-data interaction
-  functionality.
-\newblock In {\em Proceedings of the Third International Workshop on
-  Exploratory Search in Databases and the Web}, {ExploreDB} '16, pages 31--33.
-  {ACM}.
+\bibitem{gogoloudata2016}
+Gogolou A, Kyriakidi M, Ioannidis Y.
+\newblock Data Exploration: A Roll Call of All User-data Interaction
+  Functionality.
+\newblock In: Proceedings of the Third International Workshop on Exploratory
+  Search in Databases and the Web. {ExploreDB} '16. {ACM};. p. 31--33.
+\newblock Available from: \url{http://doi.acm.org/10.1145/2948674.2955105}.
 
-\bibitem{graves_visualization_2013}
-Alvaro Graves and James Hendler.
-\newblock Visualization tools for open government data.
-\newblock In {\em Proceedings of the 14th Annual International Conference on
-  Digital Government Research}, dg.o '13, pages 136--145. {ACM}.
+\bibitem{gravesvisualization2013}
+Graves A, Hendler J.
+\newblock Visualization Tools for Open Government Data.
+\newblock In: Proceedings of the 14th Annual International Conference on
+  Digital Government Research. dg.o '13. {ACM};. p. 136--145.
+\newblock Available from: \url{http://doi.acm.org/10.1145/2479724.2479746}.
+
+\bibitem{neighbourhoodstatistics}
+Neighbourhood Statistics;.
+\newblock Available from:
+  \url{http://www.neighbourhood.statistics.gov.uk/dissemination/}.
+
+\bibitem{experian}
+Customer Segmentation.
+\newblock {CACI} Ltd;.
+\newblock Available from:
+  \url{http://www.eurim.org.uk/activities/tgdialogues/Experian-H&F_CustomerSegmentation.pdf}.
+
+\bibitem{acornuserguide}
+Customer Segmentation;.
+\newblock Available from:
+  \url{http://acorn.caci.co.uk/downloads/Acorn-User-guide.pdf}.
+
+\bibitem{kentmidway}
+Kent \& Medway Interactive Guide;.
+\newblock Available from:
+  \url{http://guides.business-strategies.co.uk/kentandmedway/html/visualisation.htm?010121}.
 
 \end{thebibliography}

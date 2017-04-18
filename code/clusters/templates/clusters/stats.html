@@ -1,0 +1,170 @@
+{% extends "clusters/base.html" %}
+{% load clusters_extras %}
+
+{% block content %}
+
+<h1>{{ cluster.name }} Stats</h1>
+<a class="btn btn-primary" href="{% url 'clusters:detail' cluster.id %}" role="button">See this group</a>
+<a class="btn btn-primary" href="{% url 'clusters:compare' cluster.id %}" role="button">Compare clusters</a>
+<a class="btn btn-primary" href="{% url 'clusters:stats' cluster.id %}" role="button">Stats</a>
+{% for population in subcluster_values %}
+  <a class="btn btn-primary" href="{% url 'clusters:subcluster_detail' cluster.id forloop.counter0 %}">Cluster {{ forloop.counter0 }}</a>
+{% endfor %}
+<a class="btn btn-primary" data-toggle="modal" data-target="#aboutModal">About group</a>
+<span id="about-icon" class="glyphicon glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="modal" data-target="#instructions"></span>
+
+<br>
+<br>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <a class="btn" href="{% url 'clusters:increase' cluster.id %}" data-toggle="tooltip" data-placement="top" title="Click to increment number of clusters"><span class="glyphicon glyphicon-arrow-up"></span></a>
+      {{ num_of_clusters }} clusters
+      <a class="btn" href="{% url 'clusters:decrease' cluster.id %}" data-toggle="tooltip" data-placement="top" title="Click to decrement number of clusters"><span class="glyphicon glyphicon-arrow-down"></span></a>
+      <br>
+      <br>
+      Total group population: {{ total_group_pop }} / {{ total_pop }}  ({% percent total_group_pop total_pop %}%)
+      <ul>
+      {% for population in subcluster_values %}
+        <li><a href="{% url 'clusters:subcluster_detail' cluster.id forloop.counter0 %}">Cluster {{ forloop.counter0 }}</a> [{{ population }}/{{ total_group_pop }}] ({% percent population total_group_pop %}%)</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+</script>
+
+{{ elbow_chart.as_html }}
+
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p id="question_no"></p>
+      <p id="question_str"></p>
+      <p id="choices"></p>
+    </div>
+  </div>
+</div>
+
+<h3>Table of the mean values</h3>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        {% for cell in table_header %}
+        <td class="show-text">{{cell}}</td>
+        {% endfor %}
+      </tr>
+    </thead>
+      {% for row in rows %}
+      <tr>
+        {% for cell in row %}
+        <td>{{cell}}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<!-- Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">About this group</h4>
+      </div>
+      <div class="modal-body">
+        <h4>Group factors</h4>
+        <ul>
+          <li>Q43 : {{ questions_strs.0 }} <span class="badge">{% choice_as_str 1 cluster.factor1 %}</span></li>
+          <li>Q45 : {{ questions_strs.1 }} <span class="badge">{% choice_as_str 2 cluster.factor2 %}</span></li>
+          <li>Q46 : {{ questions_strs.2 }} <span class="badge">{% choice_as_str 3 cluster.factor3 %}</span></li>
+          <li>Q47 : {{ questions_strs.3 }} <span class="badge">{% choice_as_str 4 cluster.factor4 %}</span></li>
+          <li>Q35 : {{ questions_strs.4 }} <span class="badge">{% choice_as_str 5 cluster.factor5 %}</span></li>
+        </ul>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p>Number of rows: {{ group_size }}/{{ total_group_pop }}  ({% percent group_size total_group_pop %}%)</p>
+            <p>Source: {{ about }}</p>
+            <p>Number of clusters: {{ num_of_clusters }}</p>
+            <ul>
+            {% for population in subcluster_values %}
+              <li><a href="{% url 'clusters:subcluster_detail' cluster.id forloop.counter0 %}">Cluster {{ forloop.counter0 }}</a> [{{ population }}]</li>
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var d = {{ js_data|safe }};
+var patt = new RegExp("Q[0-9]{1,2}");
+var patt1 = new RegExp("Q[0-9]{1,2}[A-Z]{1,2}");
+var patt2 = new RegExp("[A-Z]{1,2}$");
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.show-text').mouseover(function() {
+      dict = get_text(this.innerHTML);
+      $('#question_no').text("Question code: " + dict['question_no']);
+      $('#question_str').html("Survey question:<br>" + dict['question_str']);
+      $('#choices').html("Choices:<br>" + dict['choices_str']);
+    });
+});
+
+function get_text(question_code) {
+  if (question_code.includes("_")) {
+    qc = "Q13";
+    number = question_code.slice(-1);
+    output = {
+      'question_no': question_code,
+      'question_str': d[qc]['choices'][number],
+      'choices': {'1': 'Strongly Agree'},
+      'choices_str': "1 Strongly Agree<br>2 Agree<br>3 Neither agree nor disagree<br>4 Disagree<br>5 Strongly disagree",
+    };
+    return output;
+  } else if (patt1.test(question_code)) {
+    qc = patt.exec(question_code);
+    number = question_code.match(patt2);
+    output = {
+      'question_no': question_code,
+      'question_str': d[qc]['question_str'] + " " + d[qc]['choices'][number],
+      'choices': {'0': 'No', '1': 'Yes'},
+      'choices_str': "0 No <br>1 Yes"
+    };
+    return output;
+  }
+  return d[question_code];
+}
+</script>
+{% endblock %}
+
+{% block instructions %}
+<ul>
+  <li>
+    The Elbow chart aids the user in finding the optimal number of clusters using the elbow method.
+    The most biggest bend in the graph gives the optimal number of clusters.
+  </li>
+  <li>
+    Below the chart is the Table of mean values. The columns are the questions and the rows are the clusters.
+    Therefore, values indicate the mean value for a question and cluster. This enables the user to identify differences between each cluster.
+  </li>
+</ul>
+{% endblock %}

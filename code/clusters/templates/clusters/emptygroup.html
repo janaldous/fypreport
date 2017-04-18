@@ -1,0 +1,7 @@
+{% extends "clusters/base.html" %}
+
+{% block content %}
+Empty group.
+
+<a class="btn btn-danger" href="{% url 'clusters:delete' cluster.id %}">Delete group</a>
+{% endblock %}
