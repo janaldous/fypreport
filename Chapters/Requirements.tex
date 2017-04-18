@@ -1,26 +1,24 @@
 \chapter{Requirements} \label{ch:requirements}
 
-The functional and non-functional requirements was created based on communication, through interviews and email, with a member of the Policy and Communications Team, and requirements which I have created based on initial requirements by our contact. Our contact described the context in which the tool may be used, the overall objective of the software, the users\textsc{\char13} technical abilities and some functional requirements, namely the method to create groups (see section \ref{creating_groups}). Communication with our contact was not sustained after initial requirements were collected due to the council\textquotesingle s large workload. The rest of the requirements was created in accordance with the overall goal, initial requirements and according to my own analysis of the data.
+The functional and non-functional requirements was created based on communication, through interviews and email, with a member of the Policy and Communications Team of Lambeth Council, and requirements which I have created based on initial requirements by him. He described the context in which the tool may be used, the overall objective of the software, the users\textsc{\char13} technical abilities and some functional requirements, namely the method to create groups (see section \ref{creating_groups}). Communication with our contact was not sustained after initial requirements were collected due to the council\textquotesingle s large workload. The rest of the requirements was created in accordance with the overall goal, initial requirements and according to my own analysis of the data.
 
 \section{Objective}
-The purpose of this application is to support those in local government councils, in charge of creating policies, to explore data on residents demographics and satisfaction with council services. User-defined groups will allow the user to focus on specific portions of the population. Aided by visualizations through graphs and maps, it may lead the user to identify which segments of the population requires the which resources.
+The purpose of this application is to support those in local government councils, in charge of creating policies, to explore data on residents demographics and satisfaction with council services. User-defined groups will allow the user to focus on specific portions of the population. Aided by visualizations through graphs and maps, it may lead the user to identify which segments of the population requires which resources.
 
 \section{Description of data to be used}
 The following local data provided by Lambeth should be used:
 \begin{itemize}
-  \item \textbf{CSV of Lambeth\textquotesingle s 2016 Residential Survey}: a survey of a sample of Lambeth\textquotesingle s population consisting of 1024 people about their quality of life, what they thought of Lambeth\textquotesingle s services and about the respondents themselves. The data is in the form of a CSV text file. Residents\textquotesingle  answers are categorical data in the form of code specified by the Survey Code Translation (see point below, Survey Code Translation). Single answer questions have its own column and its choice code is a positive integer. Multiple answer questions, each answer is regarded as a sub question in the form of `Q5A' meaning question 5, choice code `A' (see below Survey Code Translation). Therefore, a sub question has its own column and entries are in code as a 1 or 0 meaning yes or no respectively. There are also other fields which have been added to the original survey results such as group, subgroup, quintile, which is a result of previous data analysis.
-  \item \textbf{Microsoft Word document of Lambeth\textquotesingle s 2016 Residential Survey Code Translation}: a Microsoft Word document of the original survey with the original questions and code used in the data associated with the question. Under each question is the choice code and English meaning of the choice. The choice code is either a number for single answer questions (e.g. 1. Male, 2. Female) or letters for multiple answer questions (e.g. A. Access to nature, B. Activities for teenagers, etc.).
+  \item \textbf{CSV of Lambeth\textquotesingle s 2016 Residential Survey}: a survey of a sample of Lambeth\textquotesingle s population consisting of 1042 people about their quality of life, what they thought of Lambeth\textquotesingle s services and about the respondents themselves. The data is in the form of a CSV text file. Residents\textsc{\char13}  answers are categorical data in the form of code specified by the Survey Code Translation (see point below, Survey Code Translation). Single answer questions have its own column and its choice code is a positive integer. For multiple answer questions, each answer is regarded as a sub question in the form of `Q5A' meaning question 5, choice code `A' (see below Survey Code Translation). Therefore, a sub question has its own column and entries are in code as a 1 or 0 meaning yes or no respectively. There are also other fields which have been added to the original survey results such as group, subgroup, quintile, which is a result of previous data analysis.
+  \item \textbf{Microsoft Word document of Lambeth\textquotesingle s 2016 Residential Survey Code Translation}: a Microsoft Word document of the original survey with the original questions and code used in the data associated with the question. Under each question is the choice code and English meaning of the choice. The choice code is either a number for single answer questions (e.g. 1. Male, 2. Female) or letters for multiple answer questions (e.g. A. Access to nature, B. Activities for teenagers, etc.). The choice codes are written as lists or tables in the document.
   \item \textbf{GeoJSON of Lambeth\textquotesingle s Ward\textquotesingle s Boundary Specifications}: downloaded from Lambeth\textquotesingle s website, it is a GeoJSON, simple geographical features encoded as a JSON, of the geographical boundaries of each ward.
 \end{itemize}
 
 \section{Functional Requirements}
-Functional requirements with the words textbf{should} or textbf{must} is a required feature. Requirements with the word textbf{may}, is a desirable feature which may or may not be implemented should there not be enough development time.
-
 
 \begin{enumerate}
   \item Data storage requirements
     \begin{enumerate}
-      \item 1.	The system must save the actual files of the datasets (CSV, text files or JSON) and not access the file through a URL of another website.
+      \item 1.	The system must save the actual files of the data sets (CSV, text files or JSON) and not access the file through a URL of another website.
     \end{enumerate}
   \item Grouping requirements
     \begin{enumerate}
@@ -30,7 +28,7 @@ Functional requirements with the words textbf{should} or textbf{must} is a requi
 				\item Single answer questions or questions which requires only one answer should be visualized as stacked bar charts or pie charts.
 				\item Multi-code questions or questions which requires more than one answer should be visualized as bar charts.
 				\item Clicking data on a graph should display which wards have answered the selected question and choice on the map (see functional requirement 4).
-				\item The questions under section Questions to be visualized should be visualized following requirements 3a and 3b.
+				\item The questions under section \ref{sec:} to be visualized should be visualized following requirements 3a and 3b.
 			\end{enumerate}
 		\item Like a population density map, which shows higher density concentrations of people as a darker color and lower density concentrations as a lighter color on particular areas of the map, the map should show the selected data (see functional requirement 3c). The map should be divided into the council\textquotesingle s wards; the boundaries of each ward should be obvious. The color of the ward should depend on the number of residents who have the selected question and answer (see functional requirement 3c).
 		\item The user should be able to compare values of a data variable between all groups such that groups should be compared to the average value of the variable in the whole population (i.e. compare the percentage of disabled people who are male to the percentage of the whole population who are male).
@@ -40,13 +38,13 @@ Functional requirements with the words textbf{should} or textbf{must} is a requi
 	\begin{enumerate}
 		\item The system should segment a group using a clustering algorithm.
 		\item The system should display any statistical information (e.g. the mean of the answers of a question) on the differences between the clusters.
-		\item The user should be able to compare information between the group\textquotesingle s data and each of the clusters\textquotesingle  data.
+		\item The user should be able to compare information between the group\textquotesingle s data and each of the clusters\textsc{\char13} data.
 	\end{enumerate}
 \end{enumerate}
 
 
 \section{Creating groups} \label{creating_groups}
-A group should be based on residents\textquotesingle  answers to 5 questions in the residential survey. At least 1 question is required to form a group, therefore the rest of the 4 questions could have any answer. The group will be composed of residents who match the required answer(s) to the required questions.\par
+A group should be based on residents\textsc{\char13} answers to 5 questions in the residential survey. At least 1 question is required to form a group, therefore the rest of the 4 questions could have any answer. The group will be composed of residents who match the required answer(s) to the required questions.\par
 
 There are 5 questions in which a user can create a group:
 
